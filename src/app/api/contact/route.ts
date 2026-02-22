@@ -37,16 +37,16 @@ export async function POST(request: NextRequest) {
 
     // Send email
     await transporter.sendMail({
-      from: `"Geltec Web" <${process.env.SMTP_USER}>`,
+      from: `"Geltec Consultores Web" <${process.env.SMTP_USER}>`,
       to: contactEmail,
       replyTo: email,
-      subject: `[Geltec Web] Nueva consulta: ${type}`,
+      subject: `[Geltec Consultores] Nueva consulta: ${type}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: #432818; padding: 24px; border-radius: 8px 8px 0 0;">
             <h1 style="color: #d2bdac; margin: 0; font-size: 20px;">Nueva consulta desde el sitio web</h1>
           </div>
-          <div style="background: #faf8f5; padding: 24px; border: 1px solid #e1dcd5; border-top: none; border-radius: 0 0 8px 8px;">
+          <div style="background: #e8e4de; padding: 24px; border: 1px solid #d2bdac; border-top: none; border-radius: 0 0 8px 8px;">
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
                 <td style="padding: 8px 0; color: #666; width: 140px;"><strong>Nombre:</strong></td>

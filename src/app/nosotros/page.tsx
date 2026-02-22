@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Nosotros",
   description:
-    "Conozca a Geltec: nuestra misión, visión, valores y el equipo de profesionales que respalda cada solución.",
+    "Conozca a Geltec Consultores: nuestra misión, visión, valores y el equipo de profesionales que respalda cada solución.",
 };
 
 const values = [
@@ -119,7 +119,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Values */}
-      <section className="py-24 lg:py-32 bg-tertiary/30">
+      <section className="py-24 lg:py-32 bg-secondary/15">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
             eyebrow="Lo que nos define"
@@ -131,7 +131,7 @@ export default function NosotrosPage() {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="p-8 lg:p-10 bg-white rounded-2xl border border-secondary/15 text-center"
+                className="p-8 lg:p-10 bg-secondary/10 rounded-2xl border border-secondary/15 text-center"
               >
                 <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center mx-auto mb-6">
                   <value.icon

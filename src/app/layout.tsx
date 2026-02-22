@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,19 +11,13 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: {
-    default: "Geltec | Asesoría en Riesgos, Compliance y Servicios Contables",
-    template: "%s | Geltec",
+    default: "Geltec Consultores | Asesoría en Riesgos, Compliance y Servicios Contables",
+    template: "%s | Geltec Consultores",
   },
   description:
-    "Geltec ofrece servicios profesionales de consultoría en riesgos, compliance, anticorrupción, contabilidad y tributación para empresas que buscan operar con transparencia.",
+    "Geltec Consultores ofrece servicios profesionales de consultoría en riesgos, compliance, anticorrupción, contabilidad y tributación para empresas que buscan operar con transparencia.",
   keywords: [
     "compliance",
     "riesgos",
@@ -35,7 +29,7 @@ export const metadata: Metadata = {
     "ética empresarial",
   ],
   openGraph: {
-    title: "Geltec | Asesoría en Riesgos, Compliance y Servicios Contables",
+    title: "Geltec Consultores | Asesoría en Riesgos, Compliance y Servicios Contables",
     description:
       "Servicios profesionales de consultoría en riesgos, compliance, anticorrupción y servicios contables.",
     type: "website",
@@ -51,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${playfair.variable} ${dmSans.variable} antialiased grain-overlay`}
+        className={`${playfair.variable} antialiased grain-overlay`}
       >
         <Navbar />
         <main className="pt-20">{children}</main>

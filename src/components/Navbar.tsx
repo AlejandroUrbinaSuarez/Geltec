@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <Logo size={36} className="text-primary transition-transform duration-300 group-hover:scale-110" />
             <span className="font-heading text-2xl font-bold tracking-tight text-primary">
-              Geltec
+              Geltec Consultores
             </span>
           </Link>
 

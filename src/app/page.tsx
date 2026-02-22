@@ -143,7 +143,7 @@ export default function HomePage() {
               <Link
                 key={service.title}
                 href="/servicios"
-                className={`group relative p-8 lg:p-10 rounded-2xl border border-secondary/20 bg-white hover:bg-tertiary-light transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:border-secondary/40 animate-fade-in-up animation-delay-${(i + 1) * 100}`}
+                className={`group relative p-8 lg:p-10 rounded-2xl border border-secondary/20 bg-secondary/10 hover:bg-secondary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:border-secondary/40 animate-fade-in-up animation-delay-${(i + 1) * 100}`}
               >
                 <div className="flex items-start gap-5">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
@@ -184,7 +184,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════ WHY GELTEC ══════════════ */}
-      <section className="py-24 lg:py-32 bg-tertiary/40">
+      <section className="py-24 lg:py-32 bg-secondary/15">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -217,7 +217,7 @@ export default function HomePage() {
               {differentiators.map((item) => (
                 <div
                   key={item.label}
-                  className="p-8 bg-white rounded-2xl text-center border border-secondary/15 shadow-sm"
+                  className="p-8 bg-secondary/10 rounded-2xl text-center border border-secondary/15 shadow-sm"
                 >
                   <item.icon
                     size={28}

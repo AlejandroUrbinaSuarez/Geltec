@@ -273,7 +273,7 @@ export default function ContactoPage() {
               </div>
 
               {/* Map placeholder */}
-              <div className="mt-10 h-64 rounded-2xl bg-tertiary border border-secondary/20 flex items-center justify-center">
+              <div className="mt-10 h-64 rounded-2xl bg-secondary/20 border border-secondary/20 flex items-center justify-center">
                 <div className="text-center">
                   <MapPin size={32} className="text-primary/30 mx-auto mb-2" />
                   <p className="text-sm text-dark/40">

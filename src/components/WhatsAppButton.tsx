@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react";
 export default function WhatsAppButton() {
   const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+1234567890";
   const message = encodeURIComponent(
-    "Hola, me gustaría obtener más información sobre los servicios de Geltec."
+    "Hola, me gustaría obtener más información sobre los servicios de Geltec Consultores."
   );
 
   return (

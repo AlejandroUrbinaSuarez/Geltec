@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",
-  description: "Política de privacidad y protección de datos personales de Geltec.",
+  description: "Política de privacidad y protección de datos personales de Geltec Consultores.",
 };
 
 export default function PrivacidadPage() {

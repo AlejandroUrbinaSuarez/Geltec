@@ -129,7 +129,7 @@ export default function ServiciosPage() {
                 </div>
 
                 <div
-                  className={`bg-tertiary-light rounded-2xl p-8 lg:p-10 ${
+                  className={`bg-secondary/15 rounded-2xl p-8 lg:p-10 ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >

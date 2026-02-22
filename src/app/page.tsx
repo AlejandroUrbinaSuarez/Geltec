@@ -1,65 +1,242 @@
-import Image from "next/image";
+import Link from "next/link";
+import {
+  ShieldCheck,
+  Calculator,
+  Scale,
+  Briefcase,
+  CheckCircle2,
+  Users,
+  Award,
+  Clock,
+} from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
+import CTASection from "@/components/CTASection";
 
-export default function Home() {
+const services = [
+  {
+    icon: ShieldCheck,
+    title: "Riesgos y Compliance",
+    description:
+      "Identificamos, evaluamos y mitigamos riesgos operacionales. Diseñamos programas de cumplimiento normativo adaptados a su industria.",
+  },
+  {
+    icon: Calculator,
+    title: "Contabilidad y Tributación",
+    description:
+      "Servicios contables integrales y planificación tributaria estratégica para optimizar la carga fiscal de su empresa.",
+  },
+  {
+    icon: Scale,
+    title: "Anticorrupción y Ética",
+    description:
+      "Programas anticorrupción robustos, códigos de ética y canales de denuncia que fortalecen la cultura organizacional.",
+  },
+  {
+    icon: Briefcase,
+    title: "Asesoría Legal Corporativa",
+    description:
+      "Asesoría jurídica especializada en derecho corporativo, contratos y regulación sectorial para la toma de decisiones segura.",
+  },
+];
+
+const differentiators = [
+  {
+    icon: Users,
+    stat: "200+",
+    label: "Empresas asesoradas",
+  },
+  {
+    icon: Award,
+    stat: "15+",
+    label: "Años de experiencia",
+  },
+  {
+    icon: CheckCircle2,
+    stat: "100%",
+    label: "Compromiso con resultados",
+  },
+  {
+    icon: Clock,
+    stat: "24/7",
+    label: "Soporte disponible",
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* ══════════════ HERO ══════════════ */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-primary">
+        {/* Background texture */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-light opacity-80" />
+          <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl" />
+          {/* Diagonal line accents */}
+          <div className="absolute top-0 right-0 w-full h-full opacity-[0.03]">
+            <div className="absolute top-20 right-20 w-px h-96 bg-white rotate-[30deg] origin-top" />
+            <div className="absolute top-40 right-60 w-px h-64 bg-white rotate-[30deg] origin-top" />
+            <div className="absolute top-10 right-40 w-px h-80 bg-white rotate-[30deg] origin-top" />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32">
+          <div className="max-w-3xl">
+            <p className="animate-fade-in-up text-xs font-semibold uppercase tracking-[0.3em] text-secondary/80 mb-6">
+              Asesoría de riesgos · Compliance · Servicios contables
+            </p>
+            <h1 className="animate-fade-in-up animation-delay-100 font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-8">
+              Protegemos la{" "}
+              <span className="text-secondary">integridad</span>{" "}
+              de su empresa
+            </h1>
+            <p className="animate-fade-in-up animation-delay-200 text-lg lg:text-xl text-white/60 max-w-xl mb-10 leading-relaxed">
+              Soluciones integrales en gestión de riesgos, compliance,
+              anticorrupción y servicios contables para empresas que
+              exigen excelencia y transparencia.
+            </p>
+            <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contacto"
+                className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-semibold text-sm tracking-wide rounded-lg hover:bg-secondary-light transition-all duration-200 hover:shadow-lg hover:shadow-secondary/20"
+              >
+                Solicitar Consulta
+                <svg
+                  className="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+              <Link
+                href="/servicios"
+                className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-medium text-sm tracking-wide rounded-lg hover:bg-white/10 transition-all duration-200"
+              >
+                Conocer Servicios
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-warm-white to-transparent" />
+      </section>
+
+      {/* ══════════════ SERVICES ══════════════ */}
+      <section className="py-24 lg:py-32 bg-warm-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Nuestros Servicios"
+            title="Soluciones integrales para su empresa"
+            subtitle="Combinamos experiencia multidisciplinaria para ofrecer un servicio integral que cubre todas las necesidades de cumplimiento y gestión de su organización."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {services.map((service, i) => (
+              <Link
+                key={service.title}
+                href="/servicios"
+                className={`group relative p-8 lg:p-10 rounded-2xl border border-secondary/20 bg-white hover:bg-tertiary-light transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:border-secondary/40 animate-fade-in-up animation-delay-${(i + 1) * 100}`}
+              >
+                <div className="flex items-start gap-5">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                    <service.icon
+                      size={24}
+                      className="text-primary"
+                      strokeWidth={1.5}
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-3 group-hover:text-primary-light transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-dark/60 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <svg
+                    className="w-5 h-5 text-primary/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════ WHY GELTEC ══════════════ */}
+      <section className="py-24 lg:py-32 bg-tertiary/40">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <SectionHeading
+                eyebrow="¿Por qué elegirnos?"
+                title="Experiencia que genera confianza"
+                subtitle="Más de una década asesorando a empresas líderes en la gestión de riesgos y el cumplimiento normativo. Nuestro enfoque personalizado garantiza soluciones que se adaptan a cada organización."
+                centered={false}
+              />
+              <ul className="space-y-4">
+                {[
+                  "Equipo multidisciplinario de expertos certificados",
+                  "Enfoque personalizado según industria y tamaño",
+                  "Metodologías alineadas a estándares internacionales",
+                  "Acompañamiento continuo y medición de resultados",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2
+                      size={20}
+                      className="text-primary mt-0.5 shrink-0"
+                      strokeWidth={1.5}
+                    />
+                    <span className="text-dark/70">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="grid grid-cols-2 gap-6">
+              {differentiators.map((item) => (
+                <div
+                  key={item.label}
+                  className="p-8 bg-white rounded-2xl text-center border border-secondary/15 shadow-sm"
+                >
+                  <item.icon
+                    size={28}
+                    className="text-primary mx-auto mb-4"
+                    strokeWidth={1.5}
+                  />
+                  <p className="font-heading text-3xl lg:text-4xl font-bold text-primary mb-2">
+                    {item.stat}
+                  </p>
+                  <p className="text-sm text-dark/50">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════ CTA ══════════════ */}
+      <CTASection />
+    </>
   );
 }

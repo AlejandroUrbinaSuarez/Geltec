@@ -57,19 +57,19 @@ export default function NosotrosPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-primary py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-tertiary-light py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl translate-y-1/2" />
         </div>
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary/70 mb-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary/60 mb-4">
             Quiénes somos
           </p>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary max-w-3xl">
             Profesionales comprometidos con la{" "}
             <span className="text-secondary">excelencia</span>
           </h1>
-          <p className="mt-6 text-lg text-white/60 max-w-2xl">
+          <p className="mt-6 text-lg text-dark/60 max-w-2xl">
             Somos un equipo multidisciplinario dedicado a proteger y fortalecer
             la integridad de las organizaciones.
           </p>

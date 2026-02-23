@@ -78,19 +78,19 @@ export default function ServiciosPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-primary py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-tertiary-light py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary/70 mb-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary/60 mb-4">
             Lo que hacemos
           </p>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary max-w-3xl">
             Servicios profesionales para empresas{" "}
             <span className="text-secondary">íntegras</span>
           </h1>
-          <p className="mt-6 text-lg text-white/60 max-w-2xl">
+          <p className="mt-6 text-lg text-dark/60 max-w-2xl">
             Un enfoque multidisciplinario que integra gestión de riesgos,
             cumplimiento normativo, servicios contables y asesoría legal en una
             sola solución.

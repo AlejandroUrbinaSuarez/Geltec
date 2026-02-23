@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
+import TopBar from "./TopBar";
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -18,7 +19,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-warm-white/90 backdrop-blur-md border-b border-secondary/30">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <TopBar />
+      <div className="bg-warm-white/90 backdrop-blur-md border-b border-secondary/30">
       <nav className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
@@ -89,6 +92,7 @@ export default function Navbar() {
           </div>
         )}
       </nav>
+      </div>
     </header>
   );
 }

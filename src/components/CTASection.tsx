@@ -12,23 +12,23 @@ export default function CTASection({
   buttonHref?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-primary py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-tertiary py-20 lg:py-24">
       {/* Decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/15 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/15 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
       </div>
 
       <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-5">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-5">
           {title}
         </h2>
-        <p className="text-lg text-white/70 mb-10 max-w-2xl mx-auto">
+        <p className="text-lg text-dark/60 mb-10 max-w-2xl mx-auto">
           {subtitle}
         </p>
         <Link
           href={buttonHref}
-          className="inline-flex items-center px-8 py-4 bg-secondary text-primary font-semibold text-sm tracking-wide rounded-lg hover:bg-secondary-light transition-all duration-200 hover:shadow-lg hover:shadow-secondary/20"
+          className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold text-sm tracking-wide rounded-lg hover:bg-primary-light transition-all duration-200 hover:shadow-lg hover:shadow-primary/20"
         >
           {buttonText}
           <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

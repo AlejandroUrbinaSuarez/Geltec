@@ -43,8 +43,8 @@ export async function POST(request: NextRequest) {
       subject: `[Geltec Consultores] Nueva consulta: ${type}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background: #432818; padding: 24px; border-radius: 8px 8px 0 0;">
-            <h1 style="color: #d2bdac; margin: 0; font-size: 20px;">Nueva consulta desde el sitio web</h1>
+          <div style="background: #e1dcd5; padding: 24px; border-radius: 8px 8px 0 0;">
+            <h1 style="color: #432818; margin: 0; font-size: 20px;">Nueva consulta desde el sitio web</h1>
           </div>
           <div style="background: #e8e4de; padding: 24px; border: 1px solid #d2bdac; border-top: none; border-radius: 0 0 8px 8px;">
             <table style="width: 100%; border-collapse: collapse;">

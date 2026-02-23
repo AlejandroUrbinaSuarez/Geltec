@@ -66,31 +66,30 @@ export default function HomePage() {
   return (
     <>
       {/* ══════════════ HERO ══════════════ */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-primary">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-tertiary-light">
         {/* Background texture */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-light opacity-80" />
-          <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-secondary/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl" />
           {/* Diagonal line accents */}
           <div className="absolute top-0 right-0 w-full h-full opacity-[0.03]">
-            <div className="absolute top-20 right-20 w-px h-96 bg-white rotate-[30deg] origin-top" />
-            <div className="absolute top-40 right-60 w-px h-64 bg-white rotate-[30deg] origin-top" />
-            <div className="absolute top-10 right-40 w-px h-80 bg-white rotate-[30deg] origin-top" />
+            <div className="absolute top-20 right-20 w-px h-96 bg-primary rotate-[30deg] origin-top" />
+            <div className="absolute top-40 right-60 w-px h-64 bg-primary rotate-[30deg] origin-top" />
+            <div className="absolute top-10 right-40 w-px h-80 bg-primary rotate-[30deg] origin-top" />
           </div>
         </div>
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32">
           <div className="max-w-3xl">
-            <p className="animate-fade-in-up text-xs font-semibold uppercase tracking-[0.3em] text-secondary/80 mb-6">
+            <p className="animate-fade-in-up text-xs font-semibold uppercase tracking-[0.3em] text-primary/60 mb-6">
               Asesoría de riesgos · Compliance · Servicios contables
             </p>
-            <h1 className="animate-fade-in-up animation-delay-100 font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-8">
+            <h1 className="animate-fade-in-up animation-delay-100 font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary leading-[1.1] mb-8">
               Protegemos la{" "}
               <span className="text-secondary">integridad</span>{" "}
               de su empresa
             </h1>
-            <p className="animate-fade-in-up animation-delay-200 text-lg lg:text-xl text-white/60 max-w-xl mb-10 leading-relaxed">
+            <p className="animate-fade-in-up animation-delay-200 text-lg lg:text-xl text-dark/60 max-w-xl mb-10 leading-relaxed">
               Soluciones integrales en gestión de riesgos, compliance,
               anticorrupción y servicios contables para empresas que
               exigen excelencia y transparencia.
@@ -98,7 +97,7 @@ export default function HomePage() {
             <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contacto"
-                className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-semibold text-sm tracking-wide rounded-lg hover:bg-secondary-light transition-all duration-200 hover:shadow-lg hover:shadow-secondary/20"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold text-sm tracking-wide rounded-lg hover:bg-primary-light transition-all duration-200 hover:shadow-lg hover:shadow-primary/20"
               >
                 Solicitar Consulta
                 <svg
@@ -117,7 +116,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/servicios"
-                className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-medium text-sm tracking-wide rounded-lg hover:bg-white/10 transition-all duration-200"
+                className="inline-flex items-center justify-center px-8 py-4 border border-primary/20 text-primary font-medium text-sm tracking-wide rounded-lg hover:bg-primary/5 transition-all duration-200"
               >
                 Conocer Servicios
               </Link>

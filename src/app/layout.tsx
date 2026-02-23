@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -45,10 +46,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${playfair.variable} antialiased grain-overlay`}
+        className={`${poppins.variable} antialiased grain-overlay`}
       >
         <Navbar />
-        <main className="pt-20">{children}</main>
+        <main className="pt-20 md:pt-28">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>

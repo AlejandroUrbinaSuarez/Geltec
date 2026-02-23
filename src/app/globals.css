@@ -14,13 +14,13 @@
   --color-warm-white: #e8e4de;
 
   /* Font */
-  --font-heading: var(--font-playfair);
+  --font-heading: var(--font-poppins);
 }
 
 body {
   background: var(--color-warm-white);
   color: var(--color-dark);
-  font-family: var(--font-heading), Georgia, serif;
+  font-family: var(--font-heading), sans-serif;
 }
 
 /* Smooth scrolling */
@@ -78,5 +78,5 @@ html {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary);
+  background: var(--color-secondary);
 }

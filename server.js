@@ -2,7 +2,6 @@
 // This file bootstraps the Next.js standalone server
 // and ensures static files are served correctly.
 
-const { execSync } = require("child_process");
 const path = require("path");
 const fs = require("fs");
 
@@ -29,12 +28,18 @@ function copyDirSync(src, dest) {
   }
 }
 
-// Copy static files if they haven't been copied yet
-if (!fs.existsSync(staticDest) && fs.existsSync(staticSrc)) {
+// Always copy fresh static files (removes stale hashes from previous builds)
+if (fs.existsSync(staticSrc)) {
+  if (fs.existsSync(staticDest)) {
+    fs.rmSync(staticDest, { recursive: true });
+  }
   console.log("Copying static assets to standalone directory...");
   copyDirSync(staticSrc, staticDest);
 }
-if (!fs.existsSync(publicDest) && fs.existsSync(publicSrc)) {
+if (fs.existsSync(publicSrc)) {
+  if (fs.existsSync(publicDest)) {
+    fs.rmSync(publicDest, { recursive: true });
+  }
   console.log("Copying public assets to standalone directory...");
   copyDirSync(publicSrc, publicDest);
 }

@@ -70,7 +70,7 @@ export default function ContactoPage() {
           </h1>
           <p className="mt-6 text-lg text-white/60 max-w-2xl">
             Complete el formulario o contáctenos directamente. Responderemos en
-            menos de 24 horas hábiles.
+            menos de 24 horas.
           </p>
         </div>
       </section>
@@ -246,7 +246,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-dark mb-1">Teléfono</h3>
-                    <p className="text-dark/60">+1 (234) 567-890</p>
+                    <p className="text-dark/60">+57 320 910 4055</p>
                   </div>
                 </div>
 
@@ -256,7 +256,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-dark mb-1">Ubicación</h3>
-                    <p className="text-dark/60">Ciudad, País</p>
+                    <p className="text-dark/60">Cúcuta, Colombia</p>
                   </div>
                 </div>
 

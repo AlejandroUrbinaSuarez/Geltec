@@ -3,6 +3,8 @@ import { socialLinks } from "@/lib/socialLinks";
 
 export default function TopBar() {
   const activeSocials = socialLinks.filter((s) => s.url);
+  const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || "+573209104055";
+  const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contacto@geltec-consultores.com";
 
   return (
     <div className="hidden md:block bg-primary">
@@ -11,19 +13,19 @@ export default function TopBar() {
           {/* Contact info */}
           <div className="flex items-center gap-5 text-white/60">
             <a
-              href="mailto:contacto@geltec.com"
+              href={`mailto:${email}`}
               className="flex items-center gap-1.5 hover:text-white transition-colors"
             >
               <Mail size={13} strokeWidth={1.5} />
-              <span>contacto@geltec.com</span>
+              <span>{email}</span>
             </a>
             <span className="text-white/20">|</span>
             <a
-              href="tel:+573209104055"
+              href={`tel:${phone}`}
               className="flex items-center gap-1.5 hover:text-white transition-colors"
             >
               <Phone size={13} strokeWidth={1.5} />
-              <span>+57 320 910 4055</span>
+              <span>{phone}</span>
             </a>
           </div>
 

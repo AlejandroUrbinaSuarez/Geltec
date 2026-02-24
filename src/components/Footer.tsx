@@ -5,6 +5,8 @@ import { socialLinks } from "@/lib/socialLinks";
 
 export default function Footer() {
   const activeSocials = socialLinks.filter((s) => s.url);
+  const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || "+573209104055";
+  const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contacto@geltec-consultores.com";
 
   return (
     <footer className="bg-tertiary text-dark/90 border-t border-secondary/30">
@@ -96,11 +98,11 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-primary mt-0.5 shrink-0" />
-                <span className="text-sm text-dark/60">contacto@geltec.com</span>
+                <span className="text-sm text-dark/60">{email}</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={16} className="text-primary mt-0.5 shrink-0" />
-                <span className="text-sm text-dark/60">+573209104055</span>
+                <span className="text-sm text-dark/60">{phone}</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-primary mt-0.5 shrink-0" />

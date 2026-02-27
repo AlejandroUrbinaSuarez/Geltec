@@ -1,75 +1,70 @@
 import type { Metadata } from "next";
-import {
-  ShieldCheck,
-  Calculator,
-  Scale,
-  Briefcase,
-  ChevronRight,
-} from "lucide-react";
-import SectionHeading from "@/components/SectionHeading";
+import { ShieldCheck, Calculator, Scale, ChevronRight } from "lucide-react";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "Servicios",
   description:
-    "Servicios profesionales de consultoría en riesgos, compliance, anticorrupción, contabilidad y asesoría legal corporativa.",
+    "Dirección Jurídica-Tributaria, Auditoría y Riesgos, y Dirección Contable. Servicios profesionales para empresas que buscan operar con transparencia.",
 };
 
-const services = [
+const services: {
+  icon: typeof Scale;
+  title: string;
+  description: string;
+  items?: string[];
+  sections?: { subtitle: string; items: string[] }[];
+}[] = [
+  {
+    icon: Scale,
+    title: "Dirección Jurídica – Tributaria",
+    description:
+      "Acompañamiento jurídico y tributario estratégico para proteger los intereses de su empresa en cada negociación y proceso legal.",
+    items: [
+      "Proyección de contratos para negocios especiales",
+      "Asesoría y defensa técnica en procesos jurídicos personalizados",
+    ],
+  },
   {
     icon: ShieldCheck,
-    title: "Consultoría de Riesgos y Compliance",
+    title: "Dirección de Auditoría y Riesgos",
     description:
-      "Diseñamos e implementamos programas integrales de gestión de riesgos y cumplimiento normativo que protegen a su organización y generan valor sostenible.",
-    items: [
-      "Evaluación y mapeo de riesgos corporativos",
-      "Diseño de programas de compliance",
-      "Prevención de lavado de activos (PLA/FT)",
-      "Due diligence y conocimiento del cliente (KYC)",
-      "Auditorías de cumplimiento normativo",
-      "Capacitación y cultura de compliance",
+      "Servicios integrales de auditoría, revisoría fiscal y gestión de riesgos para garantizar el cumplimiento normativo y la transparencia de su organización.",
+    sections: [
+      {
+        subtitle: "Auditorías – Revisoría Fiscal",
+        items: [
+          "Diagnóstico de detección de riesgos sancionatorios penales y fiscales de los entes de control",
+          "Peritajes contables forenses",
+        ],
+      },
+      {
+        subtitle: "Auditorías Internas",
+        items: [],
+      },
+      {
+        subtitle: "Gestión de Riesgos",
+        items: [
+          "Servicio de diseño, evaluación e implementación de política SARLAFT – SAGRILAFT – COMPLIANCE",
+        ],
+      },
     ],
   },
   {
     icon: Calculator,
-    title: "Servicios Contables y Tributarios",
+    title: "Dirección Contable",
     description:
-      "Soluciones contables y tributarias que van más allá del cumplimiento: optimizamos su gestión financiera para impulsar el crecimiento de su negocio.",
+      "Soluciones contables integrales que van más allá del cumplimiento: optimizamos su gestión financiera para impulsar el crecimiento de su negocio.",
     items: [
-      "Contabilidad general y financiera",
-      "Declaraciones y planificación tributaria",
-      "Auditoría contable y financiera",
-      "Informes financieros bajo NIIF/IFRS",
-      "Asesoría en precios de transferencia",
-      "Gestión de obligaciones fiscales",
-    ],
-  },
-  {
-    icon: Scale,
-    title: "Anticorrupción y Ética Empresarial",
-    description:
-      "Construimos una cultura de integridad en su organización a través de programas anticorrupción sólidos y mecanismos de prevención efectivos.",
-    items: [
-      "Programas anticorrupción y antisoborno",
-      "Códigos de ética y conducta corporativa",
-      "Canal de denuncias confidencial",
-      "Investigaciones internas",
-      "Monitoreo y mejora continua",
-      "Formación en ética empresarial",
-    ],
-  },
-  {
-    icon: Briefcase,
-    title: "Asesoría Legal Corporativa",
-    description:
-      "Acompañamiento jurídico estratégico para que cada decisión de su empresa esté respaldada por un marco legal sólido y actualizado.",
-    items: [
-      "Asesoría en derecho corporativo y societario",
-      "Revisión y redacción de contratos",
-      "Regulación sectorial y normativa",
-      "Gobierno corporativo",
-      "Protección de datos personales",
-      "Acompañamiento en procesos regulatorios",
+      "Asesoría de gestión de negocios especiales",
+      "Revisión y verificación de impuestos",
+      "Revisión y verificación de Estados Financieros",
+      "Análisis y verificación de registros contables",
+      "Asesoría especializada para declaración de renta (P/N – P/J)",
+      "Asesoría especializada para información exógena (P/N – P/J)",
+      "Consultoría internacional",
+      "Servicio especializado en insolvencia (P/N – P/J)",
+      "Liquidación y disolución de sociedades",
     ],
   },
 ];
@@ -87,13 +82,13 @@ export default function ServiciosPage() {
             Lo que hacemos
           </p>
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary max-w-3xl">
-            Servicios profesionales para empresas{" "}
-            <span className="text-secondary">íntegras</span>
+            Nuestras líneas de{" "}
+            <span className="text-secondary">servicio</span>
           </h1>
           <p className="mt-6 text-lg text-dark/60 max-w-2xl">
-            Un enfoque multidisciplinario que integra gestión de riesgos,
-            cumplimiento normativo, servicios contables y asesoría legal en una
-            sola solución.
+            Tres direcciones especializadas que integran asesoría jurídica,
+            auditoría y gestión de riesgos, y servicios contables para su
+            organización.
           </p>
         </div>
       </section>
@@ -136,17 +131,42 @@ export default function ServiciosPage() {
                   <h3 className="text-sm font-semibold uppercase tracking-widest text-primary/50 mb-6">
                     Incluye
                   </h3>
-                  <ul className="space-y-4">
-                    {service.items.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <ChevronRight
-                          size={18}
-                          className="text-primary/40 mt-0.5 shrink-0"
-                        />
-                        <span className="text-dark/70">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {service.items ? (
+                    <ul className="space-y-4">
+                      {service.items.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <ChevronRight
+                            size={18}
+                            className="text-primary/40 mt-0.5 shrink-0"
+                          />
+                          <span className="text-dark/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <div className="space-y-6">
+                      {service.sections?.map((section) => (
+                        <div key={section.subtitle}>
+                          <h4 className="font-heading text-sm font-semibold text-primary mb-3">
+                            {section.subtitle}
+                          </h4>
+                          {section.items.length > 0 && (
+                            <ul className="space-y-3 ml-1">
+                              {section.items.map((item) => (
+                                <li key={item} className="flex items-start gap-3">
+                                  <ChevronRight
+                                    size={18}
+                                    className="text-primary/40 mt-0.5 shrink-0"
+                                  />
+                                  <span className="text-dark/70">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

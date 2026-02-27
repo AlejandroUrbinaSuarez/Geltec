@@ -3,7 +3,6 @@ import {
   ShieldCheck,
   Calculator,
   Scale,
-  Briefcase,
   CheckCircle2,
   Users,
   Award,
@@ -14,28 +13,22 @@ import CTASection from "@/components/CTASection";
 
 const services = [
   {
-    icon: ShieldCheck,
-    title: "Riesgos y Compliance",
+    icon: Scale,
+    title: "Dirección Jurídica – Tributaria",
     description:
-      "Identificamos, evaluamos y mitigamos riesgos operacionales. Diseñamos programas de cumplimiento normativo adaptados a su industria.",
+      "Acompañamiento jurídico y tributario estratégico: proyección de contratos y defensa técnica en procesos personalizados.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Dirección de Auditoría y Riesgos",
+    description:
+      "Revisoría fiscal, auditorías internas, peritajes contables forenses y gestión de riesgos SARLAFT – SAGRILAFT – COMPLIANCE.",
   },
   {
     icon: Calculator,
-    title: "Contabilidad y Tributación",
+    title: "Dirección Contable",
     description:
-      "Servicios contables integrales y planificación tributaria estratégica para optimizar la carga fiscal de su empresa.",
-  },
-  {
-    icon: Scale,
-    title: "Anticorrupción y Ética",
-    description:
-      "Programas anticorrupción robustos, códigos de ética y canales de denuncia que fortalecen la cultura organizacional.",
-  },
-  {
-    icon: Briefcase,
-    title: "Asesoría Legal Corporativa",
-    description:
-      "Asesoría jurídica especializada en derecho corporativo, contratos y regulación sectorial para la toma de decisiones segura.",
+      "Servicios contables integrales: impuestos, estados financieros, declaración de renta, información exógena y consultoría internacional.",
   },
 ];
 
@@ -82,7 +75,7 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32">
           <div className="max-w-3xl">
             <p className="animate-fade-in-up text-xs font-semibold uppercase tracking-[0.3em] text-primary/60 mb-6">
-              Asesoría de riesgos · Compliance · Servicios contables
+              Jurídica · Auditoría y Riesgos · Contable
             </p>
             <h1 className="animate-fade-in-up animation-delay-100 font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary leading-[1.1] mb-8">
               Protegemos la{" "}
@@ -137,7 +130,7 @@ export default function HomePage() {
             subtitle="Combinamos experiencia multidisciplinaria para ofrecer un servicio integral que cubre todas las necesidades de cumplimiento y gestión de su organización."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, i) => (
               <Link
                 key={service.title}

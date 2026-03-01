@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Target, Eye, Heart, Shield, Lightbulb, Handshake } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import ObjectiveCard from "@/components/ObjectiveCard";
 
 export const metadata: Metadata = {
   title: "Nosotros",
@@ -77,10 +78,16 @@ export default function NosotrosPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            <div className="relative">
+      <section className="relative py-24 lg:py-32 overflow-hidden">
+        {/* Subtle atmosphere */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/8 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
+            {/* Misión */}
+            <div className="relative lg:pr-16">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center">
                   <Target size={28} className="text-primary" strokeWidth={1.5} />
@@ -90,15 +97,21 @@ export default function NosotrosPage() {
                 </h2>
               </div>
               <p className="text-dark/60 leading-relaxed text-lg">
-                Brindar asesoría integral de excelencia en gestión de riesgos,
-                compliance, anticorrupción y servicios contables, ayudando a
-                nuestros clientes a operar con transparencia, cumplir con la
-                normativa vigente y generar valor sostenible para sus
-                organizaciones y la sociedad.
+                La firma redefine el ejercicio estratégico legal, tributario y
+                financiero, cuestionando lo establecido y reconstruyendo
+                soluciones desde cero para impulsar a sus clientes más allá del
+                cumplimiento: hacia la expansión, la ventaja competitiva y el
+                liderazgo empresarial. Actuamos con intensidad, disciplina y
+                ejecución implacable, porque no entramos al mercado a participar,
+                entramos a transformar.
               </p>
             </div>
 
-            <div className="relative">
+            {/* Vertical divider (desktop only) */}
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-secondary/30" />
+
+            {/* Visión */}
+            <div className="relative lg:pl-16">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center">
                   <Eye size={28} className="text-primary" strokeWidth={1.5} />
@@ -108,12 +121,75 @@ export default function NosotrosPage() {
                 </h2>
               </div>
               <p className="text-dark/60 leading-relaxed text-lg">
-                Ser la firma de referencia en asesoría de riesgos y compliance
-                en la región, reconocida por la calidad de nuestros servicios,
-                la integridad de nuestro equipo y el impacto positivo que
-                generamos en la cultura corporativa de nuestros clientes.
+                Ser la firma que redefine el estándar del sector en Colombia,
+                reconocida no solo por su excelencia técnica, sino por su
+                pensamiento audaz, su acción decidida y su capacidad de convertir
+                la presión en crecimiento. Construimos liderazgo a través del
+                coraje sostenido, donde cada desafío es una oportunidad de
+                reconstrucción y cada fracaso es retroalimentación para
+                evolucionar.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Objectives */}
+      <section className="relative py-24 lg:py-32 bg-tertiary-light overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl -translate-y-1/3" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/8 rounded-full blur-3xl translate-y-1/3" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Hacia dónde vamos"
+            title="Objetivos Estratégicos"
+            subtitle="Los pilares que guían nuestra evolución y el impacto que generamos en cada cliente."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
+            <ObjectiveCard
+              number="01"
+              title="Liderazgo y Posicionamiento"
+              items={[
+                "Redefinir el estándar del sector mediante la creación y difusión de metodologías propias en estrategia legal, tributaria y financiera.",
+                "Expandir la presencia nacional e internacional, posicionando a Geltec como referente en pensamiento audaz y ejecución intrépida.",
+                "Construir autoridad técnica a través de publicaciones, análisis especializados y participación en escenarios de alto impacto empresarial.",
+                "Convertirse en la firma elegida por grandes organizaciones que buscan crecimiento sin importar la presión, no solo cumplimiento.",
+              ]}
+            />
+            <ObjectiveCard
+              number="02"
+              title="Innovación y Reconstrucción Estratégica"
+              items={[
+                "Cuestionar sistemáticamente las suposiciones del sector, incorporando procesos de análisis crítico en cada proyecto.",
+                "Desmantelar limitaciones estructurales en los modelos legales, tributarios y financieros de los clientes para habilitar nuevas ventajas competitivas.",
+                "Diseñar soluciones desde cero, evitando enfoques tradicionales cuando no generan diferenciación o expansión.",
+                "Transformar cada desafío en un laboratorio de reconstrucción, documentando aprendizajes y modelos replicables.",
+              ]}
+            />
+            <ObjectiveCard
+              number="03"
+              title="Ejecución y Resultados"
+              items={[
+                "Operar con intensidad, disciplina y acción implacable en todos los proyectos, garantizando entregables de alto impacto.",
+                "Convertir la presión en crecimiento, estableciendo métricas que midan la capacidad de respuesta en escenarios complejos.",
+                "Integrar el fracaso como retroalimentación estratégica, con ciclos de revisión que fortalezcan la toma de decisiones.",
+                "Asegurar que cada cliente experimente expansión real, ya sea en eficiencia, competitividad, estructura o liderazgo.",
+              ]}
+            />
+            <ObjectiveCard
+              number="04"
+              title="Cultura y Talento"
+              items={[
+                "Fomentar una cultura de pensamiento audaz, donde las ideas disruptivas sean la norma, no la excepción.",
+                "Promover la acción decidida, evitando la parálisis por análisis y privilegiando la ejecución estratégica.",
+                "Desarrollar equipos capaces de sostener el coraje en el tiempo, incluso en escenarios de alta presión.",
+                "Instalar la mentalidad de que el verdadero espíritu empresarial comienza donde termina la comodidad, impulsando la evolución continua.",
+              ]}
+            />
           </div>
         </div>
       </section>

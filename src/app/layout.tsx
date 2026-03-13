@@ -49,7 +49,7 @@ export default function RootLayout({
         className={`${poppins.variable} antialiased grain-overlay`}
       >
         <Navbar />
-        <main className="pt-20 md:pt-28">{children}</main>
+        <main className="pt-24 md:pt-32">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>

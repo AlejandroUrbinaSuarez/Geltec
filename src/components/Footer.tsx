@@ -14,9 +14,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-5">
-              <Logo size={32} className="text-primary" />
-              <span className="font-heading text-xl font-bold text-primary">Geltec Consultores</span>
+            <div className="flex items-center mb-5">
+              <Logo height={50} variant="color" />
             </div>
             <p className="text-sm leading-relaxed text-dark/60">
               Asesoría integral en riesgos, compliance y servicios contables para empresas que buscan operar con transparencia y excelencia.

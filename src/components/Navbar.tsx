@@ -23,13 +23,10 @@ export default function Navbar() {
       <TopBar />
       <div className="bg-warm-white/90 backdrop-blur-md border-b border-secondary/30">
       <nav className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <Logo size={36} className="text-primary transition-transform duration-300 group-hover:scale-110" />
-            <span className="font-heading text-2xl font-bold tracking-tight text-primary">
-              Geltec Consultores
-            </span>
+          <Link href="/" className="flex items-center group">
+            <Logo height={56} variant="color" className="transition-transform duration-300 group-hover:scale-105" />
           </Link>
 
           {/* Desktop nav */}

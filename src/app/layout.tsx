@@ -3,8 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import dynamic from "next/dynamic";
-const WhatsAppButton = dynamic(() => import("@/components/WhatsAppButton"), { ssr: false });
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const poppins = Poppins({
   variable: "--font-poppins",

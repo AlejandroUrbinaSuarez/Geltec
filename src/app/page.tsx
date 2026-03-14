@@ -13,6 +13,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Geltec Consultores | Asesoría en Riesgos, Compliance y Servicios Contables",
     description:

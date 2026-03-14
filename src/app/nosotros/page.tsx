@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import ObjectiveCard from "@/components/ObjectiveCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/nosotros" },
   title: "Nosotros",
   description:
     "Conozca a Geltec Consultores: nuestra misión, visión, valores y el equipo de profesionales que respalda cada solución.",

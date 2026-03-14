@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacidad" },
   title: "Política de Privacidad",
   description: "Política de privacidad y protección de datos personales de Geltec Consultores.",
   openGraph: {

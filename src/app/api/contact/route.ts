@@ -53,7 +53,15 @@ const FIELD_MAX_LENGTHS: Record<string, { max: number; label: string }> = {
 
 export async function POST(request: NextRequest) {
   try {
-    // Rate limiting — check before parsing the body
+    const body = await request.json();
+
+    // Honeypot anti-spam check — if the hidden field has a value, it's a bot.
+    // Return 200 silently so the bot thinks it succeeded.
+    if (body.company_url) {
+      return NextResponse.json({ success: true });
+    }
+
+    // Rate limiting
     const clientIp = getClientIp(request);
     if (isRateLimited(clientIp)) {
       return NextResponse.json(
@@ -62,7 +70,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
     const { name, email, phone, type, message } = body;
 
     // Input length validation

@@ -29,6 +29,7 @@ export default function ContactoPage() {
       phone: formData.get("phone") as string,
       type: formData.get("type") as string,
       message: formData.get("message") as string,
+      company_url: formData.get("company_url") as string,
     };
 
     try {
@@ -104,6 +105,21 @@ export default function ContactoPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot anti-spam field — invisible to real users */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute -left-[9999px] opacity-0 h-0 overflow-hidden"
+                  >
+                    <label htmlFor="company_url">Website</label>
+                    <input
+                      type="text"
+                      id="company_url"
+                      name="company_url"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label

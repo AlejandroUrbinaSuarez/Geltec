@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contacto" },
   title: "Contacto",
   description:
     "Contáctenos para una consulta personalizada en riesgos, compliance, contabilidad o asesoría legal. Responderemos en menos de 24 horas.",

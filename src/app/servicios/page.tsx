@@ -3,6 +3,7 @@ import { ShieldCheck, Calculator, Scale, ChevronRight } from "lucide-react";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/servicios" },
   title: "Servicios",
   description:
     "Dirección Jurídica-Tributaria, Auditoría y Riesgos, y Dirección Contable. Servicios profesionales para empresas que buscan operar con transparencia.",

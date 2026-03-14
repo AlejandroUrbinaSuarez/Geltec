@@ -70,9 +70,34 @@ const team = [
   },
 ];
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: "https://www.geltec.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Nosotros",
+      item: "https://www.geltec.com/nosotros",
+    },
+  ],
+};
+
 export default function NosotrosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       {/* Header */}
       <section className="relative bg-tertiary-light py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0">

@@ -22,10 +22,39 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: "https://www.geltec.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Contacto",
+      item: "https://www.geltec.com/contacto",
+    },
+  ],
+};
+
 export default function ContactoLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
+      {children}
+    </>
+  );
 }

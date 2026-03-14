@@ -102,6 +102,25 @@ const servicesJsonLd = services.map((service) => ({
   serviceType: "Consultoría empresarial",
 }));
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: "https://www.geltec.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Servicios",
+      item: "https://www.geltec.com/servicios",
+    },
+  ],
+};
+
 export default function ServiciosPage() {
   return (
     <>
@@ -109,6 +128,12 @@ export default function ServiciosPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(servicesJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
         }}
       />
       {/* Header */}

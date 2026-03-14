@@ -21,9 +21,35 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: "https://www.geltec.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Privacidad",
+      item: "https://www.geltec.com/privacidad",
+    },
+  ],
+};
+
 export default function PrivacidadPage() {
   return (
-    <section className="py-24 lg:py-32">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
+      <section className="py-24 lg:py-32">
       <div className="mx-auto max-w-3xl px-6 lg:px-8">
         <h1 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
           Política de Privacidad
@@ -106,5 +132,6 @@ export default function PrivacidadPage() {
         </div>
       </div>
     </section>
+    </>
   );
 }

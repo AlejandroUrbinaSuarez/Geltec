@@ -51,6 +51,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  aria-current={isActive ? "page" : undefined}
                   className={`px-4 py-2 text-sm tracking-wide uppercase transition-colors duration-200 rounded-lg border-b-2 ${
                     isActive
                       ? "text-primary font-semibold border-secondary bg-secondary/30"
@@ -93,6 +94,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
+                  aria-current={isActive ? "page" : undefined}
                   className={`block px-4 py-3 text-sm tracking-wide uppercase rounded-lg transition-colors ${
                     isActive
                       ? "text-primary font-semibold bg-secondary/20 border-l-3 border-secondary"

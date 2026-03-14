@@ -42,19 +42,25 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`px-4 py-2 text-sm font-medium tracking-wide uppercase transition-colors duration-200 rounded-lg ${
-                  pathname === link.href
-                    ? "text-primary bg-secondary/30"
-                    : "text-dark/70 hover:text-primary hover:bg-tertiary/50"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`px-4 py-2 text-sm tracking-wide uppercase transition-colors duration-200 rounded-lg border-b-2 ${
+                    isActive
+                      ? "text-primary font-semibold border-secondary bg-secondary/30"
+                      : "text-dark/70 font-medium border-transparent hover:text-primary hover:bg-tertiary/50"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <Link
               href="/contacto"
               className="ml-4 px-6 py-2.5 bg-primary text-white text-sm font-medium tracking-wide rounded-lg transition-all duration-200 hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20"
@@ -77,20 +83,26 @@ export default function Navbar() {
         {/* Mobile nav */}
         {isOpen && (
           <div className="md:hidden pb-6 border-t border-secondary/20 mt-2 pt-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 text-sm font-medium tracking-wide uppercase rounded-lg transition-colors ${
-                  pathname === link.href
-                    ? "text-primary bg-secondary/20"
-                    : "text-dark/70 hover:text-primary hover:bg-tertiary/30"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-4 py-3 text-sm tracking-wide uppercase rounded-lg transition-colors ${
+                    isActive
+                      ? "text-primary font-semibold bg-secondary/20 border-l-3 border-secondary"
+                      : "text-dark/70 font-medium hover:text-primary hover:bg-tertiary/30"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <Link
               href="/contacto"
               onClick={() => setIsOpen(false)}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Target, Eye, Heart, Shield, Lightbulb, Handshake } from "lucide-react";
+import { Target, Eye, Shield, Lightbulb, Handshake } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import ObjectiveCard from "@/components/ObjectiveCard";
@@ -8,6 +8,21 @@ export const metadata: Metadata = {
   title: "Nosotros",
   description:
     "Conozca a Geltec Consultores: nuestra misión, visión, valores y el equipo de profesionales que respalda cada solución.",
+  openGraph: {
+    title: "Nosotros",
+    description:
+      "Conozca a Geltec Consultores: nuestra misión, visión, valores y el equipo de profesionales que respalda cada solución.",
+    url: "https://www.geltec.com/nosotros",
+    siteName: "Geltec Consultores",
+    locale: "es_CO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nosotros",
+    description:
+      "Conozca a Geltec Consultores: nuestra misión, visión, valores y el equipo de profesionales que respalda cada solución.",
+  },
 };
 
 const values = [

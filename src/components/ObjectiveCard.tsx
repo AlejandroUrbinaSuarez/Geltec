@@ -42,7 +42,10 @@ export default function ObjectiveCard({
 
         {/* Toggle button */}
         <button
+          id={`objective-toggle-${number}`}
           onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-controls={`objective-content-${number}`}
           className="flex items-center gap-2 text-sm font-medium text-primary/50 hover:text-primary transition-colors duration-200 cursor-pointer"
         >
           <ChevronRight
@@ -54,6 +57,9 @@ export default function ObjectiveCard({
 
         {/* Expandable content */}
         <div
+          id={`objective-content-${number}`}
+          role="region"
+          aria-labelledby={`objective-toggle-${number}`}
           className={`grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
             isOpen
               ? "grid-rows-[1fr] opacity-100 mt-6"

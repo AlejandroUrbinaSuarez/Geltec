@@ -6,6 +6,21 @@ export const metadata: Metadata = {
   title: "Servicios",
   description:
     "Dirección Jurídica-Tributaria, Auditoría y Riesgos, y Dirección Contable. Servicios profesionales para empresas que buscan operar con transparencia.",
+  openGraph: {
+    title: "Servicios",
+    description:
+      "Dirección Jurídica-Tributaria, Auditoría y Riesgos, y Dirección Contable. Servicios profesionales para empresas que buscan operar con transparencia.",
+    url: "https://www.geltec.com/servicios",
+    siteName: "Geltec Consultores",
+    locale: "es_CO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Servicios",
+    description:
+      "Dirección Jurídica-Tributaria, Auditoría y Riesgos, y Dirección Contable. Servicios profesionales para empresas que buscan operar con transparencia.",
+  },
 };
 
 const services: {
@@ -69,9 +84,32 @@ const services: {
   },
 ];
 
+const servicesJsonLd = services.map((service) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: service.title,
+  description: service.description,
+  provider: {
+    "@type": "Organization",
+    "@id": "https://www.geltec.com/#organization",
+    name: "Geltec Consultores",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Colombia",
+  },
+  serviceType: "Consultoría empresarial",
+}));
+
 export default function ServiciosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesJsonLd),
+        }}
+      />
       {/* Header */}
       <section className="relative bg-tertiary-light py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0">

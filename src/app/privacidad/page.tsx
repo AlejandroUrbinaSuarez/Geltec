@@ -3,6 +3,21 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Política de Privacidad",
   description: "Política de privacidad y protección de datos personales de Geltec Consultores.",
+  openGraph: {
+    title: "Política de Privacidad",
+    description:
+      "Política de privacidad y protección de datos personales de Geltec Consultores.",
+    url: "https://www.geltec.com/privacidad",
+    siteName: "Geltec Consultores",
+    locale: "es_CO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Política de Privacidad",
+    description:
+      "Política de privacidad y protección de datos personales de Geltec Consultores.",
+  },
 };
 
 export default function PrivacidadPage() {

@@ -236,7 +236,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-dark mb-1">Email</h3>
-                    <p className="text-dark/60">contacto@geltec.com</p>
+                    <p className="text-dark/60">{process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contacto@geltec.com"}</p>
                   </div>
                 </div>
 

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -10,6 +11,24 @@ import {
 } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+
+export const metadata: Metadata = {
+  openGraph: {
+    title: "Geltec Consultores | Asesoría en Riesgos, Compliance y Servicios Contables",
+    description:
+      "Soluciones integrales en gestión de riesgos, compliance, anticorrupción y servicios contables para empresas que exigen excelencia y transparencia.",
+    url: "https://www.geltec.com",
+    siteName: "Geltec Consultores",
+    locale: "es_CO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Geltec Consultores | Asesoría en Riesgos, Compliance y Servicios Contables",
+    description:
+      "Soluciones integrales en gestión de riesgos, compliance, anticorrupción y servicios contables para empresas que exigen excelencia y transparencia.",
+  },
+};
 
 const services = [
   {
@@ -30,6 +49,12 @@ const services = [
     description:
       "Servicios contables integrales: impuestos, estados financieros, declaración de renta, información exógena y consultoría internacional.",
   },
+];
+
+const serviceDelays = [
+  "animation-delay-100",
+  "animation-delay-200",
+  "animation-delay-300",
 ];
 
 const differentiators = [
@@ -135,7 +160,7 @@ export default function HomePage() {
               <Link
                 key={service.title}
                 href="/servicios"
-                className={`group relative p-8 lg:p-10 rounded-2xl border border-secondary/20 bg-secondary/10 hover:bg-secondary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:border-secondary/40 animate-fade-in-up animation-delay-${(i + 1) * 100}`}
+                className={`group relative p-8 lg:p-10 rounded-2xl border border-secondary/20 bg-secondary/10 hover:bg-secondary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:border-secondary/40 animate-fade-in-up ${serviceDelays[i]}`}
               >
                 <div className="flex items-start gap-5">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors">

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Custom entry point for Hostinger (Phusion Passenger)
 // Passenger requires a server.js file as the startup entry.
 // This uses Next.js standard production mode (not standalone).

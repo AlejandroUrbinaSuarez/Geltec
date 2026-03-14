@@ -120,10 +120,6 @@ export default function Footer() {
             <Link href="/privacidad" className="text-xs text-dark/40 hover:text-primary transition-colors">
               Privacidad
             </Link>
-            <span className="text-xs text-dark/20">|</span>
-            <span className="text-xs text-dark/40">
-              Términos de Servicio
-            </span>
           </div>
         </div>
       </div>
